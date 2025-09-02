@@ -2,5 +2,35 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+# Let Foundry automatically resolve solc versions based on pragma statements
+# solc = "0.8.23"
+
+# Optimizer settings for Solidity 0.7.6
+optimizer = true
+optimizer_runs = 200
+
+# Remappings
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin-v5/contracts/=lib/openzeppelin-v5/contracts/",
+    "@uniswap/v3-core/=lib/v3-core/",
+    "@uniswap/v3-periphery/=lib/v3-periphery/",
+    "forge-std/=lib/forge-std/src/",
+    "ds-test/=lib/forge-std/lib/ds-test/src/",
+]
+
+# Test configurations
+[profile.default.fuzz]
+runs = 1000
+
+[profile.default.invariant]
+runs = 1000
+depth = 15
+fail_on_revert = false
+
+# Push Chain testnet configuration
+[profile.testnet]
+eth_rpc_url = "https://evm.rpc-testnet-donut-node1.push.org/"
+chain_id = 42101
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

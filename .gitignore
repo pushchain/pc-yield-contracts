@@ -1,14 +1,36 @@
 # Compiler files
 cache/
 out/
+foundry-out/
+
+# Foundry lock file (industry practice - not committed)
+foundry.lock
 
 # Ignores development broadcast logs
 !/broadcast
 /broadcast/*/31337/
 /broadcast/**/dry-run/
 
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files (macOS)
+.DS_Store
+**/.DS_Store
+
+# Node modules (if any)
+node_modules/
+
+# Coverage
+coverage/
+coverage.json
+lcov.info
+
 # Docs
 docs/
-
-# Dotenv file
-.env
