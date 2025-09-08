@@ -37,9 +37,9 @@ contract MigrationYieldFarmTest is Test {
     uint256 public constant STAKE_AMOUNT_10 = 450e18; // 450 PC
 
     // Epoch settings
-    uint256 public constant epochDuration = 7776000; // ~90 days in blocks
+    uint256 public constant epochDuration = 1814400; // ~21 days in blocks (1-second blocks)
     uint256 public constant lockPeriod = 7776000; // ~90 days in blocks
-    uint256 public constant cooldownPeriod = 2592000; // ~30 days in blocks
+    uint256 public constant cooldownPeriod = 1209600; // ~14 days in blocks (1-second blocks)
 
     // Merkle tree setup - 10 users
     bytes32 public merkleRoot;
